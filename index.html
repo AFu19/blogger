@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blogger - Index</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url(img/header-bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-family: sans-serif;
+}
+.blogg{
+	position: relative;
+	z-index: 1;
+	margin: auto;
+}
+.kepala1, .kepala2, .badan1, .badan2, .badan3, .badan4, .footer{padding: 100px;}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.row .col-lg-3{flex-wrap: 25%}
+.row .col-lg-4{flex-wrap: 33.333333%}
+.row .col-lg-6{flex-wrap: 50%}
+.row .col-lg-9{flex-wrap: 75%}
+
+.kepala1{
+	padding: 10px 115px;
+	background-color: #FFF;
+}
+.tags{
+	margin-left: 400px;
+	margin-top: 8px;
+}
+.tags a{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 0 20px;
+}
+.tags a:hover{
+	color: #007bff;
+	transition: 0.3s;
+}
+.kepala2{
+	background-color: rgba(0,0,0,0.3);
+	color: white;
+}
+.kepala2 .judul{
+	padding-top: 200px;
+	font-size: 30px;
+	line-height: 20px;
+	font-weight: bold;
+	padding-bottom: 50px;
+}
+.komen{
+	margin-left: 20px;
+	margin-top: 17px;
+}
+.gatau{
+	float: right;
+	transform: translateY(-50%);
+	line-height: 1px;
+}
+.gatau p{
+	font-size: 14px;
+}
+.gatau p, .gatau h4{
+	padding-right: 100px;
+	text-align: right;
+	font-weight: bold;
+}
+.gatau img{
+	padding-left: 160px;
+	transform: translateY(-125%);
+}
+.badan1{
+	background-color: #FFF;
+}
+.badan1 h1{
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.badan1 .teks, .badan1 .jarak{
+	font-size: 14px;
+	text-align: center;
+	color: #777777;
+	line-height: 5px;
+}
+.badan1 .jarak{
+	margin-bottom: 120px;
+}
+.badan1 .ehem{
+	padding: 15px;
+	align-items: center;
+}
+.ehem img{
+	width: 100%;
+	max-width: 350px;	
+}
+.date{
+	color: #FFF;
+	background-color: #000;
+	text-align: left;
+	padding: 3px;
+	margin-right: 250px;
+}
+.ehem a{
+	text-decoration: none;
+	color: #000;
+	padding-top: 5px;
+	font-size: 19px;
+}
+.badan2{
+	background-color: #F9F9FF;
+}
+.badan2 h1{
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.badan2 .apbah, .badan2 .jarak2{
+	font-size: 14px;
+	text-align: center;
+	color: #777777;
+	line-height: 5px;
+}
+.badan2 .jarak2{
+	margin-bottom: 120px;
+}
+.badan2 .stengah{
+	width: 50%;
+	float: left;
+	display: flex;
+	margin-bottom: 10px;
+}
+.badan2 .stengahkan{
+	float: right;
+	width: 50%;
+	display: flex;
+	margin-bottom: 10px;
+}
+.badan2 .foto .stengah .dates, .badan2 .foto .stengahkan .dates{
+	background-color: #000;
+	display: box;
+	padding-top: 5px;
+	color: #FFF;
+	margin-right: 400px;
+	text-align-last: center;
+	position: absolute;
+	z-index: 1;
+	width: 50px;
+	height: 60px;
+}
+.badan2 .foto .stengah .dates span, .badan2 .foto .stengahkan .dates span{
+	font-weight: bold;
+	padding-top: 5px;
+}
+.badan2 .foto .stengah .dates p, .badan2 .foto .stengahkan .dates p{
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.foto .stengah img, .foto .stengahkan img{
+	position: relative;
+	margin-bottom: 50px;
+}
+.aku{
+	display: block;
+	margin-left: 15px;
+}
+.aku h4 a{
+	text-decoration: none;
+	color: #222;
+	line-height: 2px;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.aku h4 a:hover{
+	color: #007bff;
+}
+.aku .terserah{
+	margin-top: 30px;
+}
+.aku .terserah, .aku .jarak3{
+	line-height: 2px;
+	color: #777;
+}
+.aku .jarak3{
+	margin-bottom: 20px;
+}
+.aku .sukak{
+	color: #777;
+	float: left;
+}
+.aku .komen2{
+	color: #777;
+	float: right;
+}
+.buton .saya{
+	margin-left: 42.5%;
+	border-radius: 25px;
+	border: 1px solid transparent;
+	padding: 10px 30px;
+	color: #FFF;
+	font-weight: bold;
+	background-color: #69B4FD;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.buton .saya:hover{
+	border: 1px solid #69B4FD;
+	background-color: #FFF;
+	color: #69B4FD;
+}
+.badan3{
+	background-color: #FFF;
+}
+.badan3 h1{
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 13px;
+}
+.badan3 .apbah1, .badan3 .jarak4{
+	font-size: 14px;
+	text-align: center;
+	color: #777777;
+	line-height: 5px;
+}
+.badan3 .jarak4{
+	margin-bottom: 120px;
+}
+.kita{float: left; margin: 5px 5px 50px 5px; width: 24%}
+.kita .aku{margin-left: 0;}
+.kita .aku .terserah,.kita .aku .jarak3,.kita .aku .sukak,.kita .aku .komen2{font-size: 15px;}
+.tanggal{
+	padding: 2px 15px;
+	background-color: #000;
+	color: #fff;
+	width: 115px;
+	text-align: center;
+}
+.badan4{background-color: #F9F9FF;}
+.badan4 h1{
+	font-size: 36px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+.badan4 .desember{
+	font-size: 14px;
+	text-align: center;
+	color: #777777;
+	margin-bottom: 600px;
+}
+.febuari{
+	max-width: 50%;
+	float: left;
+	margin-top: -400px;
+	color: #777;
+}
+.maret{
+	max-width: 50%;
+	float: right;
+	margin-top: -450px;
+	text-align: center;
+}
+.maret .dirimu{
+	color: #777;
+}
+.footer{background-color: #222;}
+.footer .april, .footer .mei, .footer .juni{color: #FFF;}
+.april{
+	width: 25%;
+	float: left;
+}
+.april h6, .mei h6, .juni h6{
+	font-size: 18px;
+	margin: 0 0 25px 0;
+}
+.april .juli{
+	text-decoration: none;
+	color: #FFF;
+	line-height: 10px;
+}
+.mei{
+	width: 50%;
+	float: left;
+}
+.mei .masukin{
+	padding: 10px 120px 10px 10px;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+	margin-right: 20px;
+}
+.mei .subret{
+	padding: 10px 20px;
+	border-radius: 25px;
+	background-color: #69B4FD;
+	border: 1px solid transparent;
+	color: #FFF;
+	font-weight: bold;
+}
+.mei .subret:hover{
+	cursor: pointer;
+	border: 1px solid #69B4FD;
+	color: #69B4FD;
+	background-color: #FFF;
+}
+.juni{
+	width: 25%;
+	float: left;
+}
+.agus .sept{
+	float: left;
+	margin: 3px 3px 0 3px;
+}
+.atas{margin-bottom: 200px;}
+.bawah{padding: 50px 0 20px 0;}
+.okt{
+	width: 75%;
+	float: left;
+	color: #777;
+}
+.okt a{text-decoration: none;color: #69B4FD}
+.nov{
+	width: 25%;
+	float: right;
+	text-align: right;
+}
+.sabit i{
+	background-color: #111;
+	width: 40px;
+	height: 30px;
+	text-align: center;
+	display: box;
+	color: #777;
+	padding-top: 15px;
+}
+.sabit i:hover{
+	color: #FFF;
+	background-color: #69B4FD;
+}
+</style>
+</head>
+<body>
+<div class="blogg">
+	<div class="kepala1 row">
+		<div class="col-lg-6">
+			<img src="img/logo.png">
+		</div>
+		<div class="col-lg-6 tags">
+			<a href="#">Home</a>
+			<a href="#">News</a>
+			<a href="#">Travel</a>
+			<a href="#">Fashion</a>
+			<a href="#">Team</a>
+			<a href="#">Pages</a>
+		</div>
+	</div>
+	<div class="kepala2">
+		<div class="judul">
+			<h1>A Discount Toner Cartridge</h1>
+			<h1>Is Better Than Ever.</h1>
+		</div>
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="row">
+					<p>15 Likes <div class="komen">02 Comments</div></p>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 gatau">
+			<h4>Mark wiens</h4>
+			<p>12 Dec, 2017 11:21 am</p>
+			<img src="img/user.jpg">
+		</div>
+	</div>
+	<div class="badan1">
+		<h1>Latest News from all categories</h1>
+		<p class="teks">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+		<p class="jarak">et dolore magna aliqua.</p>
+		<div class="foto row">
+			<div class="col-lg-4 ehem">
+				<img src="img/c1.jpg">
+				<p class="date">10 Jan 2018</p>
+				<h4><a href="#">It S Hurricane Season Visiting Hilton</a></h4>
+			</div>
+			<div class="col-lg-4 ehem">
+				<img src="img/c2.jpg">
+				<p class="date">10 Jan 2018</p>
+				<h4><a href="#">What Makes A Hotel Boutique</a></h4>
+			</div>
+			<div class="col-lg-4 ehem">
+				<img src="img/c3.jpg">
+				<p class="date">10 Jan 2018</p>
+				<h4><a href="#">Les Houches The Hidden Gem Valley</a></h4>
+			</div>
+		</div>
+	</div>
+	<div class="badan2">
+		<h1>Hot Topics from Travel Section</h1>
+		<p class="apbah">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+		<p class="jarak2">et dolore magna aliqua.</p>
+		<div class="foto">
+			<div class="stengah">
+				<div class="dates">
+					<span>20</span>
+					<p>Dec</p>
+				</div>
+				<img src="img/t1.jpg">
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>			
+			</div>
+			<div class="stengahkan">
+				<div class="dates">
+					<span>20</span>
+					<p>Dec</p>
+				</div>
+				<img src="img/t2.jpg">
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>
+			</div>
+			<div class="stengah">
+				<div class="dates">
+					<span>20</span>
+					<p>Dec</p>
+				</div>
+				<img src="img/t3.jpg">
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>
+			</div>
+			<div class="stengahkan">
+				<div class="dates">
+					<span>20</span>
+					<p>Dec</p>
+				</div>
+				<img src="img/t4.jpg">
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>
+			</div>
+		</div>
+		<div class="buton">
+			<a href="#" class="saya">Load More</a>
+		</div>
+	</div>
+	<div class="badan3">
+		<h1>Fashion News This Week</h1>
+		<p class="apbah1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+		<p class="jarak4">et dolore magna aliqua.</p>
+		<div class="kamu">
+			<div class="kita">
+				<img src="img/f1.jpg">
+				<p class="tanggal">10 Jan 2018</p>
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>
+			</div>
+			<div class="kita">
+				<img src="img/f2.jpg">
+				<p class="tanggal">10 Jan 2018</p>
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>
+			</div>
+			<div class="kita">
+				<img src="img/f3.jpg">
+				<p class="tanggal">10 Jan 2018</p>
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>
+			</div>
+			<div class="kita">
+				<img src="img/f4.jpg">
+				<p class="tanggal">10 Jan 2018</p>
+				<div class="aku">
+					<h4><a href="#"><p>Addiciton When Gambling</p>
+					<p>Becomes A Problem</p></a></h4>
+					<p class="terserah">Inapropriate lorem ipsum dolor sit</p>
+					<p class="jarak3">amet, consectetur</p>
+					<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+				</div>
+			</div>
+		</div>
+		<div class="buton">
+			<a href="#" class="saya">Load More</a>
+		</div>
+	</div>
+	<div class="badan4">
+		<h1>About Blogger Team</h1>
+		<p class="desember">Who are in extremely love with eco friendly system.</p>
+		<div class="januari">
+			<div class="febuari">
+				<p>	inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that.</p>
+				<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women.</p>
+			</div>
+			<div class="maret">
+				<img src="img/team.jpg" style="width: 520px;height: 285px;">
+				<h4 class="diriku">Vincent Alexander Fu</h4>
+				<p class="dirimu">Siswa SMK Kristen Immanuel</p>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="atas">
+			<div class="april">
+				<h6>Top Products</h6>
+				<a href="#" class="juli">Managed Website</a><br><br>
+				<a href="#" class="juli">Manage Reputation</a><br><br>
+				<a href="#" class="juli">Power Tools</a><br><br>
+				<a href="#" class="juli">Marketing Service</a>
+			</div>
+			<div class="mei">
+				<h6>Newsletter</h6>
+				<p>You can trust us. We only send promo offers, not a single spam.</p>
+				<input type="text" class="masukin" placeholder="Enter Email">
+				<button class="subret">SUBSCRIBE</button>
+			</div>
+			<div class="juni">
+				<h6>Instagram Feed</h6>
+				<div class="agus">
+					<div class="sept">
+						<img src="img/i1.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i2.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i3.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i4.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i5.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i6.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i7.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i8.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bawah">
+			<div class="okt">
+				<p>Copyright ©2020 All Rights reserved | This Template is made with luv by 
+				<a href="colorlib.com">Colorlib</a></p>
+			</div>
+			<div class="nov">
+				<a href="#" class="sabit"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="sabit"><i class="fa fa-twitter"></i></a>
+				<a href="#" class="sabit"><i class="fa fa-dribbble"></i></a>
+				<a href="https://www.instagram.com/v.alexander.fu/" target="_blank" class="sabit"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

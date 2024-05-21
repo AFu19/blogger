@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blogger - Search</title>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.lanjut{position: relative; margin: auto; width: 1345px;}
+.kepala1, .kepala2, .footer{padding: 100px;}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.row .col-lg-6{flex-wrap: 50%}
+.kepala1{
+	padding: 10px 115px;
+	background-color: #FFF;
+}
+.tags{
+	margin-left: 400px;
+	margin-top: 8px;
+}
+.tags a{
+	text-decoration: none;
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 0 20px;
+}
+.tags a:hover{
+	color: #007bff;
+	transition: 0.3s;
+}
+.kepala2{background-color: #62BDFC; color: #FFF;padding:90px 110px 110px 110px;}
+.kepala2 .haha{
+	font-size: 16px;
+	text-align: center;
+	margin: 0 0 16px;
+}
+.pencarian{
+	color: #777;
+	font-size: 14px;
+	background-color: #FFF;
+	padding: 24px;
+	width: 730px;
+	margin: auto;
+}
+.cari{
+	background-color: #F9F9FF;
+	padding: 8px 12px;
+	width: 629px;
+	margin: auto;
+	border: 1px solid #eee;
+}
+.badan1{width: 50%; float: left; padding: 100px 0 100px 100px; display: block; background-color: #FFF;}
+.badan1 .stengah{
+	width: 100%;
+	float: left;
+	display: flex;
+	margin-bottom: 50px;
+}
+.stengah .dates{
+	background-color: #000;
+	display: box;
+	padding-top: 5px;
+	color: #FFF;
+	margin-right: 400px;
+	text-align-last: center;
+	position: absolute;
+	z-index: 1;
+	width: 80px;
+	height: 60px;
+	vertical-align: middle;
+}
+.badan1 .stengah .dates span{
+	font-weight: bold;
+	padding-top: 5px;
+	font-size: 24px;
+}
+.badan1 .stengah .dates p{
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.foto .stengah img{
+	position: relative;
+	margin-bottom: 50px;
+}
+.aku{
+	display: block;
+	margin-left: 15px;
+}
+.aku h4 a{
+	text-decoration: none;
+	color: #222;
+	line-height: 2px;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+.aku h4 a:hover{
+	color: #007bff;
+}
+.aku .terserah{
+	margin-top: 30px;
+}
+.aku .terserah,.aku .hehe, .aku .jarak3{
+	line-height: 2px;
+	color: #777;
+}
+.aku .jarak3{
+	margin-bottom: 20px;
+}
+.aku .sukak{
+	color: #777;
+	float: left;
+}
+.aku .komen2{
+	color: #777;
+	float: right;
+}
+.buton .saya{
+	margin-left: 42.5%;
+	border-radius: 25px;
+	border: 1px solid transparent;
+	padding: 10px 30px;
+	color: #FFF;
+	font-weight: bold;
+	background-color: #69B4FD;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.buton .saya:hover{
+	border: 1px solid #69B4FD;
+	background-color: #FFF;
+	color: #69B4FD;
+}
+.badan2{
+	width: 20%;
+	float: left;
+	margin: auto;
+	display: block;
+	background-color: #FFF;
+}
+.bag1{
+	margin-top: 80px;
+	padding:20px 20px 20px 0;
+}
+.bag1 .border1{
+	border: 1px solid #eee;
+	padding: 20px;
+	width: 320px;
+}
+.bag1 .border1 .tulis{
+	padding: 8px;
+	width: 300px;
+	border: 1px solid #eee;
+	background-color: #F9F9F9;
+}
+.bag2{
+	padding-top: 50px;
+}
+.border2{
+	border: 1px solid #eee;
+	text-align: center;
+	width: 360px;
+}
+.border2 h2{font-size: 16px; margin: 25px;}
+.border2 p{font-size: 14px; margin: 0 10px 16px; color: #777;}
+.border2 button{
+	border-radius: 22px;
+	background-color: #ddd;
+	color: #000;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	padding: 8px 12px;
+	width: 140px;
+	height: 35px;
+	margin-bottom: 20px;
+}
+.border2 button:hover{
+	cursor: pointer;
+	background-color: #69B4FD;
+	border: 1px solid transparent;
+	color: #FFF;
+}
+.border2 i{
+	margin-right: 10px;
+}
+.bag3{padding-top: 30px}
+.border3{
+	border: 1px solid #eee;
+	width: 360px;
+}
+li{list-style-type: none; margin: 25px 0;}
+a{text-decoration: none;}
+.border3 h4{
+	font-size: 18px;
+	margin: 0 0 0 12px;
+	padding: 20px;
+	font-weight: 300;}
+.ape, .ape1{
+	font-size: 14px;
+	color: #777;
+	background-color: #F9F9FF;
+	line-height: 2px;
+	padding: 10px 200px 10px 10px;
+}
+.ape1{margin-bottom: 25px;}
+.ape:hover, .ape1:hover{
+	background-color: #000;
+	color: #FFF;
+	transition: 0.3s;
+}
+.bag4{padding-top: 30px;}
+.border4{
+	border: 1px solid #eee;
+	width: 320px;
+	padding: 20px;
+}
+.border4 h4{
+	margin: 0 0 0 12px;
+	padding: 20px 0;
+	font-size: 18px;
+	font-weight: 500;
+}
+.border4 .prgr, .border4 .jarak{font-size: 14px;line-height: 2px; color: #222;}
+.prgr{margin-top: 20px;}
+.jarak{margin-bottom: 16px;}
+.jam{
+	font-size: 14px;
+	color: #777;
+	margin: 0 0 16px;
+}
+.bag5{padding-top: 30px;}
+.border5{
+	border: 1px solid #eee;
+	width: 320px;
+	padding: 20px;
+	margin: 0 0 40px;
+}
+.border5 h4, .border6 h4{
+	margin: 0 0 0 12px;
+	padding: 20px 0;
+	font-size: 18px;
+	font-weight: 500;
+}
+.apex, .apex1{
+	color: #FFF;
+	background-color: #F9F9FF;
+	color: #777;
+	font-size: 14px;
+	margin: 0 0 10px;
+	padding: 10px 200px 10px 0;
+}
+.apex:hover, .apex1:hover{
+	background-color: #000;
+	color: #FFF;
+	transition: 0.3s;
+}
+.border6{
+	border: 1px solid #eee;
+	width: 320px;
+	margin: 0 0 40px;
+	padding: 20px 20px 180px 20px;
+}
+.awan{
+	color: #222;
+	font-size: 14px;
+	margin: 0 1px 10px;
+	padding: 10px;
+	background-color: #F9F9FF;
+	float: left;
+	border: 1px solid #ccc;
+}
+.awan:hover{
+	background-color: #69b4fd;
+	color: #FFF;
+	transition: 0.3s;
+	border: 1px solid transparent;
+}
+.footer{background-color: #222;}
+.footer .april, .footer .mei, .footer .juni{color: #FFF;}
+.april{
+	width: 25%;
+	float: left;
+}
+.april h6, .mei h6, .juni h6{
+	font-size: 18px;
+	margin: 0 0 25px 0;
+}
+.april .juli{
+	text-decoration: none;
+	color: #FFF;
+	line-height: 10px;
+}
+.mei{
+	width: 50%;
+	float: left;
+}
+.mei .masukin{
+	padding: 10px 120px 10px 10px;
+	border-radius: 20px;
+	border: 1px solid #ccc;
+	margin-right: 20px;
+}
+.mei .subret{
+	padding: 10px 20px;
+	border-radius: 25px;
+	background-color: #69B4FD;
+	border: 1px solid transparent;
+	color: #FFF;
+	font-weight: bold;
+}
+.mei .subret:hover{
+	cursor: pointer;
+	border: 1px solid #69B4FD;
+	color: #69B4FD;
+	background-color: #FFF;
+}
+.juni{
+	width: 25%;
+	float: left;
+}
+.agus .sept{
+	float: left;
+	margin: 3px 3px 0 3px;
+}
+.atas{margin-bottom: 200px;}
+.bawah{padding: 50px 0 20px 0;}
+.okt{
+	width: 75%;
+	float: left;
+	color: #777;
+}
+.okt a{text-decoration: none;color: #69B4FD}
+.nov{
+	width: 25%;
+	float: right;
+	text-align: right;
+}
+.sabit i{
+	background-color: #111;
+	width: 40px;
+	height: 30px;
+	text-align: center;
+	display: box;
+	color: #777;
+	padding-top: 15px;
+}
+.sabit i:hover{
+	color: #FFF;
+	background-color: #69B4FD;
+}
+</style>
+</head>
+<body>
+<div class="lanjut">
+	<div class="kepala1 row">
+		<div class="col-lg-6">
+			<img src="img/logo.png">
+		</div>
+		<div class="col-lg-6 tags">
+			<a href="#">Home</a>
+			<a href="#">News</a>
+			<a href="#">Travel</a>
+			<a href="#">Fashion</a>
+			<a href="#">Team</a>
+			<a href="#">Pages</a>
+		</div>
+	</div>
+
+	<div class="kepala2">
+		<div class="content">
+			<div class="pencarian">
+				<input type="text" class="cari" placeholder="Addiction when gambling">
+			</div>
+			<p class="haha">169 Results found for "Addiction when gambling"</p>
+		</div>
+	</div>
+
+	<div class="row">
+	<div class="badan1">
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t1.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t2.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t3.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t4.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t1.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t2.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t3.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="stengah">
+			<div class="dates">
+				<span>20</span>
+				<p>Dec</p>
+			</div>
+			<img src="img/t4.jpg">
+			<div class="aku">
+				<h4><a href="#"><p>Addiciton When Gambling</p>
+				<p>Becomes A Problem</p></a></h4>
+				<p class="terserah">Inapropriate behavior lorem ipsum dolor sit</p>
+				<p class="hehe">amet, consectetur Inapropriate behavior lorem ipsum dolor sit amet</p>
+				<p class="jarak3">consectetur</p>
+				<p class="sukak">15 Likes </p> <p class="komen2">02 Comments</p>
+			</div>			
+		</div>
+		<div class="buton">
+			<a href="#" class="saya">Load More Post</a>
+		</div>
+	</div>
+
+	<div class="badan2">
+		<div class="bag1">
+			<div class="border1">
+				<input type="text" class="tulis" placeholder="Search">
+			</div>
+		</div>
+		<div class="bag2">
+			<div class="border2">
+				<img src="img/asset/s-img.jpg">
+				<h2>ADELE GONZALEZ</h2>
+				<p>MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money</p>
+				<button><i class="fa fa-facebook"></i>LIKE</button>
+				<button><i class="fa fa-twitter"></i>FOLLOW</button>
+			</div>
+		</div>
+		<div class="bag3">
+			<div class="border3">
+				<h4>POST CATEGORIES</h4>
+				<ul>
+					<li><a href="#" class="ape">Technology</a></li>
+					<li><a href="#" class="ape">Lifestyle</a></li>
+					<li><a href="#" class="ape">Fashion</a></li>
+					<li><a href="#" class="ape">Art</a></li>
+					<li><a href="#" class="ape">Food</a></li>
+					<li><a href="#" class="ape">Architecture</a></li>
+					<li><a href="#" class="ape1">Adventure</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bag4">
+			<div class="border4">
+				<h4>RECENT POST</h4>
+				<img src="img/asset/slider.jpg">
+				<p class="prgr">HOME AUDIO RECORDING</p>
+				<p class="jarak">FOR EVERYONE</p>
+				<p class="jam">02 Hours ago</p>
+			</div>
+		</div>
+		<div class="bag5">
+			<div class="border5">
+				<h4>POST ARCHIEVE</h4>
+				<ul>
+					<li><a href="#" class="apex">Dec'17</a></li>
+					<li><a href="#" class="apex">Nov'17</a></li>
+					<li><a href="#" class="apex">Oct'17</a></li>
+					<li><a href="#" class="apex">Sept'17</a></li>
+					<li><a href="#" class="apex">Aug'17</a></li>
+					<li><a href="#" class="apex">Jul'17</a></li>
+					<li><a href="#" class="apex1">Jun'17</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bag6">
+			<div class="border6">
+				<h4>TAG CLOUDS</h4>
+				<ul>
+					<li><a href="#" class="awan">Lifestyle</a></li>
+					<li><a href="#" class="awan">Art</a></li>
+					<li><a href="#" class="awan">Adventure</a></li>
+					<li><a href="#" class="awan">Food</a></li>
+					<li><a href="#" class="awan">Technology</a></li>
+					<li><a href="#" class="awan">Fashion</a></li>
+					<li><a href="#" class="awan">Adventure</a></li>
+					<li><a href="#" class="awan">Food</a></li>
+					<li><a href="#" class="awan">Technology</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="footer">
+		<div class="atas">
+			<div class="april">
+				<h6>Top Products</h6>
+				<a href="#" class="juli">Managed Website</a><br><br>
+				<a href="#" class="juli">Manage Reputation</a><br><br>
+				<a href="#" class="juli">Power Tools</a><br><br>
+				<a href="#" class="juli">Marketing Service</a>
+			</div>
+			<div class="mei">
+				<h6>Newsletter</h6>
+				<p>You can trust us. We only send promo offers, not a single spam.</p>
+				<input type="text" class="masukin" placeholder="Enter Email">
+				<button class="subret">SUBSCRIBE</button>
+			</div>
+			<div class="juni">
+				<h6>Instagram Feed</h6>
+				<div class="agus">
+					<div class="sept">
+						<img src="img/i1.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i2.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i3.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i4.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i5.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i6.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i7.jpg">
+					</div>
+					<div class="sept">
+						<img src="img/i8.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bawah">
+			<div class="okt">
+				<p>Copyright ©2020 All Rights reserved | This Template is made with luv by 
+				<a href="colorlib.com">Colorlib</a></p>
+			</div>
+			<div class="nov">
+				<a href="#" class="sabit"><i class="fa fa-facebook"></i></a>
+				<a href="#" class="sabit"><i class="fa fa-twitter"></i></a>
+				<a href="#" class="sabit"><i class="fa fa-dribbble"></i></a>
+				<a href="https://www.instagram.com/v.alexander.fu/" target="_blank" class="sabit"><i class="fa fa-instagram"></i></a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
